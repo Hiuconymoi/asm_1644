@@ -1,0 +1,25 @@
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Customer Name</th>
+      <th>Product Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#each productCart}}
+      <tr>
+        <td>{{userId}}</td>
+        <td>{{name}}</td>
+        <td>{{quantity}}</td>
+        <td>{{price}}</td>
+      </tr>
+    {{/each}}
+    <tr>
+                <td style="text-alight:right">Total:{{total}}</td>
+    </tr>
+  </tbody>
+</table>
