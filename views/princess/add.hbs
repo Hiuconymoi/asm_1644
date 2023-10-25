@@ -1,0 +1,36 @@
+<form action="/princess/add" method="post" class="container col-md-8 card">
+<h1 class="text-danger text-center">ADD New Princess</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary"> Name</label>
+        <input class="form-control" type="text" name="name" id="" required minlength="3" maxlength="30">
+    </div>
+    <div class="form-group mt-3">
+        <label for="dob" class="text-primary"> Height</label>
+        <input class="form-control" type="text"  name="height" id="" required>
+    </div>
+    <div class="form-group mt-3">
+        <label for="gpa" class="text-primary">Price</label>
+        <input class="form-control" type="number"  name="price" id="" required min="0">
+    </div>
+    <div class="form-group mt-3">
+        <label for="gender" class="text-primary">Material</label>
+        <input type="radio" name="material" value="plastic" id="">Plastic
+        <input type="radio" name="material" value="ceramic" id="">Ceramic
+    </div>
+    <div class="form-group mt-3">
+        <label for="gpa" class="text-primary">Quantity</label>
+        <input class="form-control" type="number"  name="quantity" id="" required min="0">
+    </div>
+    <div class="form-group mt-3">
+        <label for="dob" class="text-primary"> Description</label>
+        <input class="form-control" type="text"  name="description" id="" required>
+    </div>
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image</label>
+        <input class="form-control" type="url"  name="image" id="" required>
+    </div>
+    <div class="form-group mt-3 mb-4 text-center">
+        <input class="btn btn-primary" type="submit" value="Add">
+        <input class="btn btn-warning" type="reset" value="Clear">
+    </div>
+</form>

@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-2">
+        <div class="navbar">
+  <form action="/princess/search" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="search" placeholder="Search" name="name">
+                </div>
+            </form>
+  <div class="container">
+     <select class="form-control" name="sort" id="" onchange="window.location.href=this.value">
+                <option value="">Sort by</option>
+                <option value="/princess">No Sort</option>
+                <option value="/princess/priceasc">Sort by price ascending</option>
+                <option value="/princess/pricedsc">Sort by price descending</option>
+            </select>
+  </div>
+</div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+    {{#each princess }}
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+            <div class="product-image">
+                 <a href="/princess/detail/{{_id}}"> 
+                    <img class="pic-1" src="{{image}}">
+                    <img class="pic-2" src="{{image}}">
+                </a>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">{{name }}</a></h3>
+                <div class="price">{{ price }}</div>
+            </div>
+        </div>
+    </div>
+   {{/each}}
+</div>
+    </div>
+</div>
+

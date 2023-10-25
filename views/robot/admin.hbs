@@ -1,0 +1,101 @@
+
+  <div class="container">
+        <div class="leftbar">
+            <h2>Admin Panel</h2>
+            <!-- Add navigation links or menus here -->
+        </div>
+        <div class="rightbar">
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Material</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Image</th>
+                        <th>Menu</th>
+                    </tr>
+                    {{#each robots }}
+    <tr>
+        <td>{{ name }}</td>
+        <td>{{ height }}cm</td>
+        <td>{{ material }}</td>
+        <td>{{ price }}</td>
+         <td>{{ quantity }}</td>
+        <td>
+            <a href="/robot/detail/{{_id}}"> <img src="{{image}}" width="150" height="150"></a> 
+        </td>
+        <td>
+            <a class="btn btn-warning" href="/robot/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/robot/delete/{{_id}}"
+            onclick="return confirm('Are you sure to delete this student?');">Delete</a>
+        </td>
+    </tr> 
+      {{/each}}
+      {{#each princess }}
+    <tr>
+        <td>{{ name }}</td>
+        <td>{{ height }}cm</td>
+        <td>{{ material }}</td>
+        <td>{{ price }}</td>
+         <td>{{ quantity }}</td>
+        <td>
+            <a href="/princess/detail/{{_id}}"> <img src="{{image}}" width="150" height="150"></a> 
+        </td>
+        <td>
+            <a class="btn btn-warning" href="/princess/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/princess/delete/{{_id}}"
+            onclick="return confirm('Are you sure to delete this student?');">Delete</a>
+        </td>
+    </tr> 
+      {{/each}}
+                </table>
+            </div>
+        </div>
+</div>
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+}
+
+.leftbar {
+  background-color: #333;
+  color: #fff;
+  width: 20%;
+  padding: 20px;
+}
+
+.rightbar {
+  width: 80%;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #60bedb;
+  color: #fff;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+</style>

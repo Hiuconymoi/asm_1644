@@ -1,0 +1,36 @@
+<div class="row">
+
+    {{#each robots }}
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+            <div class="product-image">
+                 <a href="/robot/detail/{{_id}}"> 
+                    <img class="pic-1" src="{{image}}">
+                    <img class="pic-2" src="{{image2}}">
+                </a>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">{{name }}</a></h3>
+                <div class="price">{{ price }}</div>
+            </div>
+        </div>
+    </div>
+   {{/each}}
+     {{#each princess }}
+    <div class="col-md-4 col-sm-6">
+        <div class="product-grid">
+            <div class="product-image">
+                 <a href="/princess/detail/{{_id}}"> 
+                    <img class="pic-1" src="{{image}}">
+                    <img class="pic-2" src="{{image2}}">
+                </a>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#">{{name }}</a></h3>
+                <div class="price">{{ price }}</div>
+            </div>
+        </div>
+    </div>
+   {{/each}}
+</div>
+

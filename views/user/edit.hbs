@@ -1,0 +1,15 @@
+<form action="/user/edit/{{user._id}}" method="post" class="container col-md-8 card">
+<h1 class="text-danger text-center">Edit Robot</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary"> Username</label>
+        <input class="form-control" type="text" name="username" id="" required minlength="3" maxlength="30" value="{{user.username}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="height" class="text-primary">Role</label>
+        <input class="form-control" type="text" value="{{user.role}}" name="role" id="" required>
+    </div>
+    
+    <div class="form-group mt-3 mb-4 text-center">
+        <input class="btn btn-primary" type="submit" value="Edit">
+    </div>
+</form>

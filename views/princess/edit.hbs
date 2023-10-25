@@ -1,0 +1,38 @@
+<form action="/princess/edit/{{princess._id}}" method="post" class="container col-md-8 card">
+<h1 class="text-danger text-center">Edit Princess</h1>
+    <div class="form-group mt-3">
+        <label for="name" class="text-primary"> Name</label>
+        <input class="form-control" type="text" name="name" id="" required minlength="3" maxlength="30" value="{{princess.name}}">
+    </div>
+    <div class="form-group mt-3">
+        <label for="height" class="text-primary">Height</label>
+        <input class="form-control" type="text" value="{{princess.height}}" name="height" id="" required>
+    </div>
+    <div class="form-group mt-3">
+        <label for="price" class="text-primary">Price</label>
+        <input class="form-control" type="number" value="{{princess.price}}" name="price" id="" required min="0">
+    </div>
+    <div class="form-group mt-3">
+        <label for="material" class="text-primary">Material</label>
+        {{#equal princess.material "plastic"}}
+                 <input type="radio" name="material" value="plastic" id="" checked="true">Plastic
+                <input type="radio" name="material" value="ceramic" id="">Ceramic
+        {{/equal}}
+        {{#equal princess.material "ceramic"}}
+            <input type="radio" name="material" value="plastic" id="" >Plastic
+                <input type="radio" name="material" value="ceramic" id="" checked="true">Ceramic
+        {{/equal}}
+    </div>
+    <div class="form-group mt-3">
+        <label for="description" class="text-primary"> Description</label>
+        <input class="form-control" type="text"  name="description" value="{{princess.description}}" id="" required>
+    </div>
+    <div class="form-group mt-3">
+        <label for="image" class="text-primary">Image</label>
+        <img src="{{princess.image}}" width="100" height="100">
+        <input class="form-control" type="url" value="{{princess.image}}"  name="image" id="" required>
+    </div>
+    <div class="form-group mt-3 mb-4 text-center">
+        <input class="btn btn-primary" type="submit" value="Edit">
+    </div>
+</form>

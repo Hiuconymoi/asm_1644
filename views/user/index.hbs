@@ -1,0 +1,75 @@
+
+  <div class="container">
+        <div class="leftbar">
+            <h2>Admin User</h2>
+            <!-- Add navigation links or menus here -->
+        </div>
+        <div class="rightbar">
+            <div class="table-wrapper">
+                <table>
+                    <tr>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>Menu</th>
+                    </tr>
+                    {{#each user }}
+    <tr>
+        <td class="text-center">{{ username }}</td>
+        <td class="text-center">{{ role }}</td>
+        <td>
+            <a class="btn btn-warning" href="/user/edit/{{_id}}">Edit</a>
+            <a class="btn btn-danger" href="/user/delete/{{_id}}"
+            onclick="return confirm('Are you sure to delete this student?');">Delete</a>
+        </td>
+    </tr> 
+      {{/each}}
+
+                </table>
+            </div>
+        </div>
+</div>
+
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+}
+
+.leftbar {
+  background-color: #333;
+  color: #fff;
+  width: 20%;
+  padding: 20px;
+}
+
+.rightbar {
+  width: 80%;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #60bedb;
+  color: #fff;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+</style>
